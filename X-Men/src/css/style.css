@@ -1,0 +1,102 @@
+body {
+    font-family: "Oxanium", cursive;
+    /*style all the fontsize in body*/
+    background-color: #000000;
+    color: #ffffff;
+    /*white letters*/
+}
+body::before{ /*pseudoelement*/
+    content: "";
+    background-image: url(../imagens/bg-desktop.jpg); /*the double dot (..) is to turn back a folder. This is beacuse we stay in the src/css/style.css but we need to pick a image on  src/img (it's just look like windows cd ..)*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1; /*put the image in the back */
+    opacity: 0.2;
+}
+.Header {
+    display: flex;
+    /* flexbox */
+    justify-content: center;
+    /* centering the flex children tag (img) (parent tag is header. Is need to stylish the parent tag to style the children tag*/
+    /* when we use flex direction row, the justify-content will center horizontally*/
+}
+
+.character-selection {
+    display: flex;
+    /* the both of section displays on each other's side */
+    align-items: center;
+    /* align vertically */
+    gap: 30px;
+        /**space between the sections (selected-character and characters)*/
+    min-height: calc(100vh - 152px);
+    /*vh(100% viewport height -152px (height  header)*/
+    justify-content: center;
+    
+}
+
+.character-selection .character-list {
+    display: flex;
+    flex-wrap: wrap;
+    /* If there are no spaces between the divs, then put the divs rest below*/
+    gap: 30px;
+    /**gap between the character-lists*/
+    justify-content: center;
+}
+
+.character-selection .characters {
+    display: flex;
+    flex-direction: column;
+    /*children below the others*/
+    align-items: center;
+    /*text in the center*/
+    max-width: 585px;
+    gap: 25px;
+    /*gap between the characters and the title "selection a character"*/
+}
+
+.character-selection .characters .title {
+    font-size: 20px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #47f4ff;
+    width: 100%;
+    text-align: center;
+}
+
+.character-list .character img {
+    width: 100%;
+    height: 100%;
+
+}
+
+.character-list .character.selected {
+    /*if the element has 2 classes, these classes wirte together like ".character.selected"
+    Style for Js */
+    box-shadow: 0px 0px 24px 5px #0271f7;
+}
+
+.selected-character {
+    text-align: center;
+    max-height: 530px;
+}
+
+.selected-character .big-character {
+    width: 430px;
+    height: 430px;
+}
+.selected-character .character-name{
+    border-bottom: 2px solid  #47f4ff;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+.selected-character .description-character{
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    margin-top: 20px; /* space between the title and the text*/
+    width: 420px;
+}
