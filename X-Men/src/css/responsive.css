@@ -1,0 +1,32 @@
+@media (max-width:1120px){ /*when the page arrives the 1120 widht, then apply these rules in media */
+    .Header .logo{
+        max-width: 190px;
+    }
+
+    .character-selection{
+        flex-direction: column-reverse; /*the character images stays in the below in order. The reverse put the second section on the begin, our case the selected-character*/
+        max-width: 430px;
+        margin: 0 auto; /*center ((justify-content doen't work because of the width)*/
+    }
+    .character-selection .character{
+        margin-top: 37px;
+    }
+    .character-selection .character .title{
+        font-size: 15px;
+    }
+    .character-selection .character-list{
+        gap: 9px;
+    }
+    .selected-character .character img{
+        width: 80px;
+    }
+    .selected-character .big-character{
+        width: 350px;
+        height: 350px;
+    }
+    .selected-character .description-character{
+        width: 80%;
+        font-size: 16px;
+        margin: 20px auto; /*description center */
+    }
+}
